@@ -1,0 +1,17 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="TrainingXMaster.Views.LoginPage">
+    <StackLayout HorizontalOptions="Center">
+        <StackLayout HorizontalOptions="Center" VerticalOptions="Center" Spacing="20" Margin="50">
+            <Label Text="{ Binding TitleLabel }" FontSize="Large" />
+        </StackLayout>
+        <StackLayout HorizontalOptions="Center" VerticalOptions="Center">
+            <Entry x:Name="name" Placeholder="{ Binding NameLabel }" WidthRequest="300"  VerticalOptions="CenterAndExpand" Text="{ Binding NameText }" />
+            <Entry x:Name="password" IsPassword="True"  Placeholder="{ Binding PasswordLabel }" VerticalOptions="CenterAndExpand" Text="{ Binding PasswordText }" />
+            <Button x:Name="LoginButton" HorizontalOptions="Center" Text="Login" Clicked="LoginButton_Clicked" />
+            <ActivityIndicator x:Name="LoginIndicator" Color="Blue" IsRunning="false" />
+        </StackLayout>
+    </StackLayout>
+
+</ContentPage>

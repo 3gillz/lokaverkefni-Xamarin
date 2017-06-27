@@ -1,0 +1,26 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="TrainingXMaster.Views.ProfilePage"
+             Title="Profile">
+    <ContentPage.ToolbarItems>
+        <ToolbarItem Text="Logout" Clicked="Logout_Clicked" />
+        <ToolbarItem Text="Back" Clicked="Close_Profile_Clicked" />
+    </ContentPage.ToolbarItems>
+    <ContentPage.Content>
+        <StackLayout Spacing="20" Padding="15">
+            <Label Text="{Binding name}" FontSize="Medium" />
+            <Image Source="{Binding profileImagePath}" />
+            <Label Text="{Binding email}" FontSize="Small" />
+            <Label Text="{Binding phone}" FontSize="Small" />
+            <Label Text="{Binding kennitala}" FontSize="Small" />
+            <Label Text="{Binding address}" FontSize="Small" />
+            <Label Text="{Binding country}" FontSize="Small" />
+            <Label Text="{Binding foodPref}" FontSize="Small" />
+            <Label Text="{Binding injury}" FontSize="Small" />
+            <Label Text="{Binding allergy}" FontSize="Small" />
+            <Label Text="{Binding height}" FontSize="Small" />
+            <Label Text="{Binding jobDifficulty}" FontSize="Small" />
+        </StackLayout>
+    </ContentPage.Content>
+</ContentPage>
