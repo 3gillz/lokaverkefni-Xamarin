@@ -26,20 +26,20 @@ namespace TrainingXMaster.Views
         {
             if (ToolbarItems.Count == 0)
             {
-                ToolbarItem delToolbar = new ToolbarItem();
-                delToolbar = new ToolbarItem
+                ToolbarItem profileToolbar = new ToolbarItem();
+                profileToolbar = new ToolbarItem
                 {
                     //Order = ToolbarItemOrder.Primary,
                     Text = "Profile",
                     Command = new Command(async () =>
                     {
-                        ToolbarItems.Remove(delToolbar);
+                        ToolbarItems.Remove(profileToolbar);
                         var user = Application.Current.Properties["user"].ToString();
                         var page = new NavigationPage(new ProfilePage() { BindingContext = JsonConvert.DeserializeObject<User>(user) });
                         await Application.Current.MainPage.Navigation.PushModalAsync(page, true);
                     })
                 };
-                ToolbarItems.Add(delToolbar);
+                ToolbarItems.Add(profileToolbar);
             }
             if (foodprogramLoaded)
             {

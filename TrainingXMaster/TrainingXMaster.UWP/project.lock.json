@@ -22304,8 +22304,8 @@
     },
     "MyClassLibrary/1.0.0": {
       "type": "project",
-      "path": "../../../../xxxx/failsafe/TrainingMasterXamarin/MyClassLibrary/MyClassLibrary.csproj",
-      "msbuildProject": "../../../../xxxx/failsafe/TrainingMasterXamarin/MyClassLibrary/MyClassLibrary.csproj"
+      "path": "../../MyClassLibrary/MyClassLibrary.csproj",
+      "msbuildProject": "../../MyClassLibrary/MyClassLibrary.csproj"
     },
     "TrainingXMaster/1.0.0": {
       "type": "project",

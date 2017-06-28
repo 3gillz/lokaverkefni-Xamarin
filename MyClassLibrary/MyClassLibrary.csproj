@@ -36,9 +36,14 @@
   </PropertyGroup>
   <ItemGroup>
     <Compile Include="ApiService.cs" />
+    <Compile Include="Exercise.cs" />
+    <Compile Include="FoodPortion.cs" />
+    <Compile Include="FoodProgram.cs" />
     <Compile Include="MemoryService.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Token.cs" />
+    <Compile Include="Training.cs" />
+    <Compile Include="TrainingProgram.cs" />
     <Compile Include="User.cs" />
   </ItemGroup>
   <ItemGroup>

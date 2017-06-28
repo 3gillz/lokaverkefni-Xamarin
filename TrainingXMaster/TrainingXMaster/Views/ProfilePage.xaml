@@ -9,18 +9,22 @@
     </ContentPage.ToolbarItems>
     <ContentPage.Content>
         <StackLayout Spacing="20" Padding="15">
-            <Label Text="{Binding name}" FontSize="Medium" />
-            <Image Source="{Binding profileImagePath}" />
-            <Label Text="{Binding email}" FontSize="Small" />
-            <Label Text="{Binding phone}" FontSize="Small" />
-            <Label Text="{Binding kennitala}" FontSize="Small" />
-            <Label Text="{Binding address}" FontSize="Small" />
-            <Label Text="{Binding country}" FontSize="Small" />
-            <Label Text="{Binding foodPref}" FontSize="Small" />
-            <Label Text="{Binding injury}" FontSize="Small" />
-            <Label Text="{Binding allergy}" FontSize="Small" />
-            <Label Text="{Binding height}" FontSize="Small" />
-            <Label Text="{Binding jobDifficulty}" FontSize="Small" />
+            <StackLayout Orientation="Horizontal" HorizontalOptions="Center" >
+                <StackLayout>
+                    <Label Text="{Binding name}" FontSize="Medium" />
+                    <Label Text="{Binding email}" FontSize="Small" />
+                    <Label Text="{Binding phone}" FontSize="Small" />
+                    <Label Text="{Binding kennitala}" FontSize="Small" />
+                    <Label Text="{Binding address}" FontSize="Small" />
+                    <Label Text="{Binding country}" FontSize="Small" />
+                    <Label Text="{Binding foodPref}" FontSize="Small" />
+                    <Label Text="{Binding injury}" FontSize="Small" />
+                </StackLayout>
+                <Image Source="{Binding profileImagePath}" HeightRequest="100" />
+            </StackLayout>
+                    <Label Text="{Binding allergy}" FontSize="Small" />
+                    <Label Text="{Binding height}" FontSize="Small" />
+                    <Label Text="{Binding jobDifficulty}" FontSize="Small" />
         </StackLayout>
     </ContentPage.Content>
 </ContentPage>

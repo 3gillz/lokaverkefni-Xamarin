@@ -25,3 +25,5 @@ C:\Users\dmrgu\Desktop\LastApp\TrainingXMaster\TrainingXMaster\TrainingXMaster\o
 C:\Users\dmrgu\Desktop\LastApp\TrainingXMaster\TrainingXMaster\TrainingXMaster\obj\Debug\TrainingXMaster.pdb
 C:\Users\dmrgu\Desktop\LastApp\TrainingXMaster\TrainingXMaster\TrainingXMaster\obj\Debug\TrainingXMaster.dll.mdb
 C:\Users\dmrgu\Desktop\LastApp\TrainingXMaster\TrainingXMaster\TrainingXMaster\bin\Debug\TrainingXMaster.dll.mdb
+C:\Users\dmrgu\Desktop\LastApp\TrainingXMaster\TrainingXMaster\TrainingXMaster\obj\Debug\TrainingXMaster.dll.mdb
+C:\Users\dmrgu\Desktop\LastApp\TrainingXMaster\TrainingXMaster\TrainingXMaster\bin\Debug\TrainingXMaster.dll.mdb
