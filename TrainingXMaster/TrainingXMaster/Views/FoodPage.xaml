@@ -4,22 +4,20 @@
              x:Class="TrainingXMaster.Views.FoodPage"
              Title="Foodprogram">
     <ContentPage.ToolbarItems>
-        <ToolbarItem Text="Profile" Clicked="Profile_Clicked" />
     </ContentPage.ToolbarItems>
     <ContentPage.Content>
         <StackLayout Spacing="20" Padding="15">
             <Label x:Name="FoodProgramName" HorizontalOptions="Center"  FontSize="Large" />
             <ActivityIndicator x:Name="LoadingIndicator" Color="Blue" IsRunning="false" />
+            <Label x:Name="WeekDay" HorizontalOptions="Center"  FontSize="Medium" />
             <ListView x:Name="foodListView">
                 <ListView.ItemTemplate>
                     <DataTemplate>
                         <ViewCell>
-                            <StackLayout Spacing="10">
-                                <StackLayout Orientation="Horizontal" HorizontalOptions="Center"  VerticalOptions="Center"  >
-                                    <Label Text="{Binding name}" FontAttributes="Bold" FontSize="Medium"  />
-                                    <Label Text="{Binding quantity}" FontAttributes="Bold" FontSize="Medium"/>
-                                    <Label Text=" gr." FontAttributes="Bold" FontSize="Medium"/>
-                                </StackLayout>
+                            <StackLayout Orientation="Horizontal" HorizontalOptions="Center"  VerticalOptions="Center"  >
+                                <Label Text="{Binding name}" FontAttributes="Bold" FontSize="Medium"  />
+                                <Label Text="{Binding quantity}" FontAttributes="Bold" FontSize="Medium"/>
+                                <Label Text=" gr." FontAttributes="Bold" FontSize="Medium"/>
                             </StackLayout>
                         </ViewCell>
                     </DataTemplate>

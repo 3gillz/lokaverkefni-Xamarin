@@ -23,6 +23,9 @@ namespace TrainingXMaster.Views {
         private global::Xamarin.Forms.ActivityIndicator LoadingIndicator;
         
         [System.CodeDom.Compiler.GeneratedCodeAttribute("Xamarin.Forms.Build.Tasks.XamlG", "0.0.0.0")]
+        private global::Xamarin.Forms.Label WeekDay;
+        
+        [System.CodeDom.Compiler.GeneratedCodeAttribute("Xamarin.Forms.Build.Tasks.XamlG", "0.0.0.0")]
         private global::Xamarin.Forms.ListView trainingListView;
         
         [System.CodeDom.Compiler.GeneratedCodeAttribute("Xamarin.Forms.Build.Tasks.XamlG", "0.0.0.0")]
@@ -30,6 +33,7 @@ namespace TrainingXMaster.Views {
             this.LoadFromXaml(typeof(TrainingPage));
             TrainingProgramName = this.FindByName<global::Xamarin.Forms.Label>("TrainingProgramName");
             LoadingIndicator = this.FindByName<global::Xamarin.Forms.ActivityIndicator>("LoadingIndicator");
+            WeekDay = this.FindByName<global::Xamarin.Forms.Label>("WeekDay");
             trainingListView = this.FindByName<global::Xamarin.Forms.ListView>("trainingListView");
         }
     }

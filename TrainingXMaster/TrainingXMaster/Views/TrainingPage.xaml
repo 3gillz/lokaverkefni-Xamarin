@@ -5,12 +5,13 @@
              xmlns:local="clr-namespace:TrainingXMaster;assembly=TrainingXMaster"
              Title="Trainingprogram">
     <ContentPage.ToolbarItems>
-        <ToolbarItem Text="Profile" Clicked="Profile_Clicked" />
+        <!--<ToolbarItem Text="Profile" Clicked="Profile_Clicked" />-->
     </ContentPage.ToolbarItems>
     <ContentPage.Content>
         <StackLayout Spacing="20" Padding="15">
             <Label x:Name="TrainingProgramName" HorizontalOptions="Center"  FontSize="Large" />
             <ActivityIndicator x:Name="LoadingIndicator" Color="Blue" IsRunning="false" />
+            <Label x:Name="WeekDay" HorizontalOptions="Center"  FontSize="Medium" />
             <ListView x:Name="trainingListView" ItemSelected="Training_Selected" RowHeight="60">
                 <ListView.ItemTemplate>
                     <DataTemplate>

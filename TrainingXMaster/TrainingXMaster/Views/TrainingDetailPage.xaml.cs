@@ -1,9 +1,5 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-
+using System.Windows.Input;
 using Xamarin.Forms;
 using Xamarin.Forms.Xaml;
 
@@ -15,6 +11,12 @@ namespace TrainingXMaster.Views
         public TrainingDetailPage()
         {
             InitializeComponent();
+        }
+
+        public void PlayVideo_Clicked(Button sender)
+        {
+           string link = sender.CommandParameter.ToString() + "?autoplay=1&cc_load_policy=1.";
+           Device.OpenUri(new Uri(link));          
         }
 
         async void Back_Clicked()

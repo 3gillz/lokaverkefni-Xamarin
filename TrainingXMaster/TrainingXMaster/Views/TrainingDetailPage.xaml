@@ -5,6 +5,11 @@
     <ContentPage.ToolbarItems>
         <ToolbarItem Text="Back" Clicked="Back_Clicked" />
     </ContentPage.ToolbarItems>
-    <Label Text="Test" />
-    <Label Text="{Binding name}" />
+    <StackLayout VerticalOptions="Center" HorizontalOptions="Center" Spacing="10" Padding="30">
+        
+        <Label Text="{Binding name}" FontSize="Large"/>
+        <Label Text="{Binding type}" FontSize="Small" />
+        <Label Text="{Binding description}" />
+        <Button Text="Video" Clicked="PlayVideo_Clicked" CommandParameter="{Binding link}" />
+    </StackLayout>
 </ContentPage>

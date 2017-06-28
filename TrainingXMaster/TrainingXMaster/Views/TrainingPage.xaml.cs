@@ -22,6 +22,7 @@ namespace TrainingXMaster.Views
         public TrainingPage()
         {
             InitializeComponent();
+
         }
         async void Profile_Clicked(object sender, EventArgs e)
         {
@@ -32,6 +33,23 @@ namespace TrainingXMaster.Views
 
         protected override async void OnAppearing()
         {
+            if (ToolbarItems.Count == 0)
+            {
+                ToolbarItem delToolbar = new ToolbarItem();
+                delToolbar = new ToolbarItem
+                {
+                    //Order = ToolbarItemOrder.Primary,
+                    Text = "Profile",
+                    Command = new Command(async () =>
+                    {
+                        ToolbarItems.Remove(delToolbar);
+                        var user = Application.Current.Properties["user"].ToString();
+                        var page = new NavigationPage(new ProfilePage() { BindingContext = JsonConvert.DeserializeObject<User>(user) });
+                        await Application.Current.MainPage.Navigation.PushModalAsync(page, true);
+                    })
+                };
+                ToolbarItems.Add(delToolbar);
+            }
             if (trainingprogramLoaded)
             {
                 return;
@@ -63,11 +81,13 @@ namespace TrainingXMaster.Views
                 //await Error("Something went wrong : " + res.StatusCode);
             }
             LoadingIndicator.IsRunning = false;
+            LoadingIndicator.IsVisible = false;
         }
         public async Task Training_Selected(object sender, EventArgs e)
         {
             Training selected = (trainingListView.SelectedItem as Training);
-            NavigationPage page = new NavigationPage(new TrainingDetailPage() { BindingContext = selected });
+            Exercise exercise = await apiService.GetExercise(selected.exercise_EID);
+            NavigationPage page = new NavigationPage(new TrainingDetailPage() { BindingContext = exercise });
             await Application.Current.MainPage.Navigation.PushModalAsync(page, true);
         }
 
@@ -76,6 +96,7 @@ namespace TrainingXMaster.Views
         {
             DateTime dt = DateTime.Now;
             DayOfWeek weekday = dt.DayOfWeek;
+            WeekDay.Text = weekday.ToString();
 
             switch (weekday)
             {
