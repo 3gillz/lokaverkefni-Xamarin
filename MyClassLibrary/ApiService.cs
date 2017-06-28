@@ -99,6 +99,16 @@ namespace MyClassLibrary
             client.Dispose();
             return res;
         }
+        public async Task<bool> Logout()
+        {
+            var client = new HttpClient();
+            client.DefaultRequestHeaders.Add("Accept", "application/*+xml;version=5.1");
+            client.DefaultRequestHeaders.Add("Authorization", "Bearer " + memService.GetString("trainingmaster_token"));
+            var req = new HttpRequestMessage(HttpMethod.Get, ApiPath("api/Account/Logout"));
+            var res = await client.SendAsync(req);
+            client.Dispose();
+            return res.IsSuccessStatusCode;
+        }
 
         public async Task<bool> CheckToken(string token)
         {

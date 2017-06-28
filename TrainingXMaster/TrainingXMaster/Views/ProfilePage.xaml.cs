@@ -24,14 +24,7 @@ namespace TrainingXMaster.Views
 
         public void Logout_Clicked()
         {
-            Application.Current.Properties.Clear();
-            Application.Current.Properties["trainingmaster_token"] = null;
             Application.Current.MainPage = new LoginPage();
-            //bool re = await apiService.Logout();
-            //if (re)
-            //{
-            //    Application.Current.MainPage = new LoginPage();
-            //}
         }
 
         protected override void OnAppearing()
