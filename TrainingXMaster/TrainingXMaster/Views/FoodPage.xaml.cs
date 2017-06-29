@@ -69,7 +69,7 @@ namespace TrainingXMaster.Views
             LoadingIndicator.IsVisible = false;
         }
 
-        public void SetFoodList(FoodPortion[] trainings)
+        public void SetFoodList(FoodPortion[] portions)
         {
             DateTime dt = DateTime.Now;
             DayOfWeek weekday = dt.DayOfWeek;
@@ -77,25 +77,25 @@ namespace TrainingXMaster.Views
             switch (weekday)
             {
                 case DayOfWeek.Sunday:
-                    foodListView.ItemsSource = new ObservableCollection<FoodPortion>(trainings.Where((training) => training.sunday == true));
+                    foodListView.ItemsSource = new ObservableCollection<FoodPortion>(portions.Where((training) => training.sunday == true));
                     break;
                 case DayOfWeek.Monday:
-                    foodListView.ItemsSource = new ObservableCollection<FoodPortion>(trainings.Where((training) => training.monday == true));
+                    foodListView.ItemsSource = new ObservableCollection<FoodPortion>(portions.Where((training) => training.monday == true));
                     break;
                 case DayOfWeek.Tuesday:
-                    foodListView.ItemsSource = new ObservableCollection<FoodPortion>(trainings.Where((training) => training.tuesday == true));
+                    foodListView.ItemsSource = new ObservableCollection<FoodPortion>(portions.Where((training) => training.tuesday == true));
                     break;
                 case DayOfWeek.Wednesday:
-                    foodListView.ItemsSource = new ObservableCollection<FoodPortion>(trainings.Where((training) => training.wednesday == true));
+                    foodListView.ItemsSource = new ObservableCollection<FoodPortion>(portions.Where((training) => training.wednesday == true));
                     break;
                 case DayOfWeek.Thursday:
-                    foodListView.ItemsSource = new ObservableCollection<FoodPortion>(trainings.Where((training) => training.thursday == true));
+                    foodListView.ItemsSource = new ObservableCollection<FoodPortion>(portions.Where((training) => training.thursday == true));
                     break;
                 case DayOfWeek.Friday:
-                    foodListView.ItemsSource = new ObservableCollection<FoodPortion>(trainings.Where((training) => training.friday == true));
+                    foodListView.ItemsSource = new ObservableCollection<FoodPortion>(portions.Where((training) => training.friday == true));
                     break;
                 case DayOfWeek.Saturday:
-                    foodListView.ItemsSource = new ObservableCollection<FoodPortion>(trainings.Where((training) => training.saturday == true));
+                    foodListView.ItemsSource = new ObservableCollection<FoodPortion>(portions   .Where((training) => training.saturday == true));
                     break;
             }
 

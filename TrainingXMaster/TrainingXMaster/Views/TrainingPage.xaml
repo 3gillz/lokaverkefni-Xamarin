@@ -12,7 +12,7 @@
             <Label x:Name="TrainingProgramName" HorizontalOptions="Center"  FontSize="Large" />
             <ActivityIndicator x:Name="LoadingIndicator" Color="Blue" IsRunning="false" />
             <Label x:Name="WeekDay" HorizontalOptions="Center"  FontSize="Medium" />
-            <ListView x:Name="trainingListView" ItemSelected="Training_Selected" RowHeight="60">
+            <ListView x:Name="trainingListView" ItemSelected="Training_Selected" RowHeight="60" >
                 <ListView.ItemTemplate>
                     <DataTemplate>
                         <ViewCell>

@@ -86,7 +86,7 @@ namespace TrainingXMaster.Views
 
         public static void SetMainPage()
         {
-            var tp = new MainTabbedPage();
+            var tp = new MainTabbedPage() { BarBackgroundColor =  Color.FromHex("#474544") };
             tp.Children.Add(new FoodPage { });
             tp.Children.Add(new TrainingPage { });
             Application.Current.MainPage = new NavigationPage(tp);
